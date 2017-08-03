@@ -1,0 +1,56 @@
+
+$primary-font:            Harmonia Sans, sans-serif;
+
+$font-size-base:          1.2vw !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-extra-small:   ceil(($font-size-base * 0.65)) !default; // ~10px
+
+$font-size-h1:            floor(($font-size-base * 2.8)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.4)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+
+// Typo Viewport
+$font-size: 1.8vw;
+$font-size-big: $font-size*1.1;
+$line-height: 1.4;
+
+
+$lines-to-show: 3;
+$lines-to-show-answer: 10;
+
+
+// Color
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 5%) !default;   //1a1a1a
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 55%) !default; // #555
+$gray-light:             lighten($gray-base, 95%) !default;   // #F2F2F2
+
+
+$brand-primary:          #FCF220 !default;
+$brand-secondary:        #FC4D5E !default;
+
+$brand-yellow:           $brand-primary !default;
+$brand-red:              #ff4c59 !default;
+$brand-green:            #49f073 !default;
+$brand-pink:             #ff67a9 !default;
+
+$txt-white:				 rgba(255,255,255,0.8);
+$txt-black:				 rgba(0,0,0,0.54);
+
+// Safe Area
+$safe-area-top:			  60px;
+$safe-area-left:		  90px;
+
+
+// Spacing
+$baseline:				  6px;
+
+
+// Border radius
+$border-radius: 		10px;

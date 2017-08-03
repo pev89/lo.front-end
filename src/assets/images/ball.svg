@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="124px" height="131px" viewBox="0 0 124 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>incubator-ball</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-386.000000, -785.000000)" id="incubator-ball">
+            <g transform="translate(387.000000, 786.000000)">
+                <g id="Group-2" stroke="#FC4D5E">
+                    <path d="M61,1.0078125 L61,128.056159" id="Line" stroke-linecap="square"></path>
+                    <ellipse id="Oval-2" cx="61" cy="64.5" rx="17" ry="64.5"></ellipse>
+                    <ellipse id="Oval-2" cx="62" cy="64.5" rx="32" ry="64.5"></ellipse>
+                    <ellipse id="Oval-2" cx="62" cy="64.5" rx="48" ry="64.5"></ellipse>
+                    <ellipse id="Oval-2" cx="61" cy="64.5" rx="61" ry="64.5"></ellipse>
+                </g>
+                <g id="Group-2" transform="translate(59.911915, 64.647773) rotate(31.000000) translate(-59.911915, -64.647773) translate(19.911915, 22.147773)" stroke="#FCF220">
+                    <path d="M40,0.661376953 L40,84.0368547" id="Line" stroke-linecap="square"></path>
+                    <ellipse id="Oval-2" cx="40" cy="42.328125" rx="11.147541" ry="42.328125"></ellipse>
+                    <ellipse id="Oval-2" cx="40.6557377" cy="42.328125" rx="20.9836066" ry="42.328125"></ellipse>
+                    <ellipse id="Oval-2" cx="40.6557377" cy="42.328125" rx="31.4754098" ry="42.328125"></ellipse>
+                    <ellipse id="Oval-2" cx="40" cy="42.328125" rx="40" ry="42.328125"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

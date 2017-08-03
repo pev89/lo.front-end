@@ -1,0 +1,108 @@
+// Basic
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+// alignment
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+// Headings
+
+h1{
+  text-transform: uppercase;
+  font-size: $font-size-h1;
+  font-weight: 900;
+  margin-bottom: ($baseline * 3);
+}
+h2{
+  text-transform: uppercase;
+  font-size: $font-size-h2;
+  font-weight: 900;
+  margin-bottom: ($baseline * 3);
+}
+h3{
+  font-size: $font-size-h3;
+  font-weight: 900;
+  margin-bottom: ($baseline * 2);
+}
+h4{
+  text-transform: uppercase;
+  font-size: $font-size-h4;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+p{
+  font-size: $font-size-base;
+  margin-bottom: ($baseline * 3);
+}
+
+
+
+.txt-dark-grey{
+  color: $gray-darker;
+}
+
+.txt-grey{
+  color: $gray;
+}
+
+.txt-white{
+  color: white;
+}
+
+.txt-black{
+  color: black;
+}
+
+.txt-yellow{
+  color: $brand-yellow;
+}
+
+.txt-pink{
+  color: $brand-pink;
+}
+
+.txt-green{
+  color: $brand-green;
+}
+
+.txt-red{
+  color: $brand-red;
+}
+
+
+.bg-dark-grey{
+  background-color: $gray-darker;
+}
+
+.bg-light-grey{
+  background-color: $gray-light;
+}
+
+.bg-yellow{
+  background-color: darken($brand-yellow, 10%);
+}
+
+.bg-green{
+  background-color: $brand-green;
+}
+
+.bg-red{
+  background-color: $brand-red;
+}
+.bg-pink{
+  background-color: $brand-pink;
+}
+
+
+// Modifiers
+
+.uppercase{
+  text-transform: uppercase;
+}

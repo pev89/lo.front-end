@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Harmonia Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url("../assets/fonts/HarmoniaSansProCyr-FFTitle.eot?#iefix") format("eot"),
+         url("../assets/fonts/HarmoniaSansProCyr-FFTitle.woff") format("woff"),
+         url("../assets/fonts/HarmoniaSansProCyr-FFTitle.ttf") format("truetype"),
+         url("../assets/fonts/HarmoniaSansProCyr-FFTitle.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'Harmonia Sans';
+    font-weight: 500;
+    font-style: normal;
+    src: url("../assets/fonts/33B92D_0_0.eot?#iefix") format("eot"),
+         url("../assets/fonts/33B92D_0_0.woff") format("woff"),
+         url("../assets/fonts/33B92D_0_0.woff2") format("woff2"),
+         url("../assets/fonts/33B92D_0_0.ttf") format("truetype");
+}
+
+@mixin clearfix{
+  overflow: auto;
+  zoom: 1;
+}
+
+@mixin vertical_align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Aspect Ratio TV
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+// Lines
+@mixin line-text($font-size, $line-height, $lines-to-show){
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin line-text-height($font-size, $line-height, $lines-to-show){
+    max-height: ($font-size*$line-height*$lines-to-show)+5vw!important; /* Fallback for non-webkit */
+}
+
+// Buttons
+@mixin button($class-name: 'button', $padding: 0.5rem, $border-radius: 0, $background-color: #ccc, $color: #000, $color-name: 'yellow') {
+  .#{$class-name},
+  a[data-button=#{$color-name}]{
+    display: inline-block;
+    padding: $padding;
+    @if $border-radius > 0 {
+      border-radius: $border-radius;
+    }
+    color: $color;
+    background-color: $background-color;
+    font-size: 3em;
+    transition: .25s background-color ease;
+    &:hover {
+      background-color: darken($background-color, 10%);
+    }
+    &:focus {
+      background-color: darken($background-color, 20%);
+    }
+
+  }
+}
+
+
+
+// Rounded
+
+@mixin button-rounded($class-name: 'button-rounded',  $border-radius: 50%, $background-color: #ccc, $color: #000) {
+  .#{$class-name}{
+    display: inline-block;
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    width: 50px;
+    height: 50px;
+    transition: .25s background-color ease;
+    &:hover {
+      background-color: darken($background-color, 10%);
+    }
+    &:focus {
+      background-color: darken($background-color, 20%);
+    }
+
+  }
+}
+
+
+
+// Buttons
+
+.button{
+  background-color: black;
+  outline: 1px solid $brand-yellow;
+  color: $brand-yellow;
+  font-weight: bold;
+  padding: 8px 8px 5px 8px;
+  white-space: nowrap;
+
+  &.subscribe{
+      background-color: $brand-yellow;
+      margin: 30px 0 0 -5px;
+      padding: 13px 24px 10px 24px;
+      display: inline-block;
+      outline: none;
+      border: none;
+      color: $gray-darker;
+      font-weight: 300;
+      font-family: 'harmonia sans pro cyr', sans-serif;
+      -webkit-appearance: none;
+      border-radius: 0px;
+  
+  }
+  &.cta{
+    position: relative;
+    margin: ($baseline * 5) 0;
+    display: inline-block;
+    font-size: $font-size-base;
+    padding: 26px 60px 26px 60px;
+    z-index: 1;
+  
+    &::after{
+      position: absolute;
+      display: inline-block;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      content: attr(data-category);
+      padding: 26px 60px 26px 60px;
+      outline: 1px solid yellow;
+      background-color: black;
+      transform: translate(-5px,-5px);
+    }
+  }
+
+  &.white{
+    color: black;
+    font-size: $font-size-base;
+    border: 1px solid white;
+    outline: none;
+    font-weight: 700;
+    background-color: white;
+    padding: 15px 30px 15px 30px;
+  }
+}
+
+
+
+// Triangles
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+
+
+// Paddings and Margins
+@mixin generate-spacing-classes(
+  $default-space-amounts-with-direction: (5 left l, 10 left l, 15 left l, 25 left l, 30 left l)
+) {
+  @each $space in $default-space-amounts-with-direction {
+    .m#{nth($space, 3)}-#{nth($space, 1)} {
+      margin-#{nth($space, 2)}: #{nth($space, 1)}px !important;
+    }
+  }
+}
+
+@include generate-spacing-classes();
+
+$right-space-vars: (5 right r, 10 right r, 15 right r, 25 right r, 30 right r);
+$bottom-space-vars: (5 bottom b, 10 bottom b, 15 bottom b, 25 bottom b, 30 bottom b, 100 bottom b);
+$top-space-vars: (5 top t, 10 top t, 15 top t, 25 top t, 30 top t, 100 top t);
+
+@include generate-spacing-classes(); // left comes by default
+@include generate-spacing-classes($right-space-vars);
+@include generate-spacing-classes($bottom-space-vars);
+@include generate-spacing-classes($top-space-vars);
